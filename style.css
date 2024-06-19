@@ -10,6 +10,7 @@ body {
     border: 1px solid #ccc;
     padding: 60px;
     border-radius: 10px;
+    background-color: rgb(85, 197, 197);
 }
 
 input, select, button, textarea {
@@ -25,7 +26,12 @@ textarea {
     resize: none;
 }
 button{
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
     background-color: #4442c3;
+    border-radius: 50px;
+    width: 100%;
 }
 
 h1{
