@@ -1,25 +1,34 @@
+function calc(event) {
+    event.preventDefault();
 
+    // Get the values of the input fields
+    const num1 = parseFloat(document.getElementById('num1').value);
+    const operator = document.getElementById('operator').value;
+    const num2 = parseFloat(document.getElementById('num2').value);
+    let result;
 
-function calc(){
-        let num1="";
-        let num2="";
-        let operator=document.getElementById("operaters").value;
-        num1=new Number(document.getElementById("num 1").value);
-        num2=new Number(document.getElementById("num 2").value); 
-        let lblOutput=document.getElementById("output");
-        let answer;
-       
-        switch(operator){
-            case "+":answer=num1+num2;break;
-            case "-":answer=num1-num2;break;
-            case "*":answer=num1*num2;break;
-            case "/":answer=num1/num2;break;
-           
-       
+    // Perform the calculation based on the operator selected
+    if (!isNaN(num1) && !isNaN(num2)) {
+        switch (operator) {
+            case '+':
+                result = num1 + num2;
+                break;
+            case '-':
+                result = num1 - num2;
+                break;
+            case '*':
+                result = num1 * num2;
+                break;
+            case '/':
+                result = num2 !== 0 ? num1 / num2 : 'Error: Division by zero';
+                break;
+            default:
+                result = 'Error: Invalid operator';
         }
-        lblOutput.innerHTML=answer;
+    } else {
+        result = 'Error: Please enter valid numbers';
+    }
 
-
-
- }
-
+    // Display the result in the output textarea
+    document.getElementById('output').value = result;
+}

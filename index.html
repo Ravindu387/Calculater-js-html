@@ -3,25 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div name="add">
-        <input type="text" placeholder="num 1" id="num 1"> 
-        <select name="oprteater" id="operaters">
-            <option value="+" id="+">+</option>
-            <option value="-" id="-">-</option>
-            <option value="*" id="*">*</option>
-            <option value="/" id="/">/</option>
-        </select>
-    <input type="text" placeholder="num 2" id="num 2"> =
-
-    <button onclick="calc()">Calculater</button>
-
-    <label for="" id="output"></label><br><br>
-    </div>
     
-
+    <form onsubmit="calc(event)">
+        
+            <div id="calculator">
+                <h1> Calculator</h1>
+                <input type="text" placeholder="Number 1" id="num1" required><br>
+                <select id="operator" required>
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/option>
+                </select><br>
+                <input type="text" placeholder="Number 2" id="num2" required><br>
+                <button type="submit">Calculate</button><br>
+                <textarea id="output" readonly></textarea><br><br>
+            </div>
+    
+    </form>
     <script src="app.js"></script>
 </body>
 </html>

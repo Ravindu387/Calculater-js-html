@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#calculator {
+    display: inline-block;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 60px;
+    border-radius: 10px;
+}
+
+input, select, button, textarea {
+    margin: 10px 0;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    
+}
+
+textarea {
+    height: 50px;
+    resize: none;
+}
+button{
+    background-color: #4442c3;
+}
+
+h1{
+    text-align: center;
+}
+#operator{
+    margin: 10px 0;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
